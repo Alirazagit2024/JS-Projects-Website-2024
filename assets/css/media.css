@@ -1,0 +1,12 @@
+@media (max-width: 1024px) {
+  .col-lg-8 iframe {
+    height: 550px; 
+  }
+  
+}
+
+@media (min-width: 1024px) {
+  .swp {
+    display: none;
+  }
+}

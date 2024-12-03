@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.slider2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.slide-container{
+    max-width: 1160px;
+    width: 100%;
+  }
+  .slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+  }
+  .card{
+    background-color: white;
+  }
+  .image-content,
+  .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .image-content{
+    position: relative;
+  }
+  .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #FFFF00;
+    border-radius: 25px 25px 0 25px;
+  }
+  .overlay::before,
+  .overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #FFFF00;
+  }
+  .overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+  }
+  .card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+  }
+  .card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid black;
+  }
+  .name{
+    font-size: 1.25rem;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .description{
+    font-size: 12px;
+    color: #707070;
+    text-align: center;
+  }
+  .card .button{
+    border: none;
+    font-size: 16px;
+    color: black;
+    padding: 6px 14px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .card .button:hover{
+    background: black;
+    color: #FFFF00;
+  }
+  
+  .slide-container .swiper-navBtn{
+    color: white;
+    transition: color 0.3s ease;
+  }
+  .slide-container .swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size:34px;
+  font-weight: bolder;
+}
+  .slide-container .swiper-button-next{
+    right: 8px;
+  }
+  .slide-container .swiper-button-prev{
+    left: 8px;
+  }
+  .slide-container .swiper-pagination-bullet{
+    background-color: white;
+    border: 1px solid #FFFF00;
+    opacity: 1;
+  }
+  .slide-container .swiper-pagination-bullet-active{
+    background-color: #FFFF00;
+    border: 1px solid white;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .slide-container .slide-content{
+      margin: 0 24px;
+    }
+    .slide-container .swiper-navBtn{
+      display: none;
+    }
+    .wrapper i {
+      display: none;
+    }
+  }
